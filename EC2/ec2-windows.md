@@ -1,0 +1,8 @@
+# How to install chrome in EC2 Windows instance
+
+
+<iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=powershell&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2524LocalTempDir%2520%253D%2520%2524env%253ATEMP%253B%2520%2524ChromeInstaller%2520%253D%2520%2522ChromeInstaller.exe%2522%253B%2520%28new-object%2520%2520%2520%2520System.Net.WebClient%29.DownloadFile%28%27http%253A%252F%252Fdl.google.com%252Fchrome%252Finstall%252F375.126%252Fchrome_installer.exe%27%252C%2520%2522%2524LocalTempDir%255C%2524ChromeInstaller%2522%29%253B%2520%2526%2520%2522%2524LocalTempDir%255C%2524ChromeInstaller%2522%2520%252Fsilent%2520%252Finstall%253B%2520%2524Process2Monitor%2520%253D%2520%2520%2522ChromeInstaller%2522%253B%2520Do%2520%257B%2520%2524ProcessesFound%2520%253D%2520Get-Process%2520%257C%2520%253F%257B%2524Process2Monitor%2520-contains%2520%2524_.Name%257D%2520%257C%2520Select-Object%2520-ExpandProperty%2520Name%253B%2520If%2520%28%2524ProcessesFound%29%2520%257B%2520%2522Still%2520running%253A%2520%2524%28%2524ProcessesFound%2520-join%2520%27%252C%2520%27%29%2522%2520%257C%2520Write-Host%253B%2520Start-Sleep%2520-Seconds%25202%2520%257D%2520else%2520%257B%2520rm%2520%2522%2524LocalTempDir%255C%2524ChromeInstaller%2522%2520-ErrorAction%2520SilentlyContinue%2520-Verbose%2520%257D%2520%257D%2520Until%2520%28%21%2524ProcessesFound%29"
+  style="width: 1024px; height: 315px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
