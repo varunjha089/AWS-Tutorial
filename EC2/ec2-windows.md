@@ -38,3 +38,6 @@ Click **`Review and Launch`** button
 ![Launch](/EC2/assets/launch.png)
 
 **Wait for 5-minutes, and login. Your screen wil be like this.**
+
+Your final instance will be linke
+![EC2-WINDOWS](/EC2/assets/final.png)
